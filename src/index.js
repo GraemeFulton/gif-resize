@@ -45,7 +45,7 @@ module.exports = opts => async buf => {
 	}
 	
 	if (opts.scale) {
-		args.push(`--scale=${opts.scale[0]},${opts.scale[1]}`);
+		args.push(`--scale=${opts.scale[0]}${opts.scale[1]?'x'+opts.scale[1]:''}`);
 	}
 
 	if (opts.crop) {
