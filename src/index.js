@@ -43,6 +43,10 @@ module.exports = opts => async buf => {
 	if (opts.gamma) {
 		args.push(`--gamma=${opts.gamma}`);
 	}
+	
+	if (opts.scale) {
+		args.push(`--scale=${opts.scale[0]},${opts.scale[1]}`);
+	}
 
 	if (opts.crop) {
 		args.push(`--crop=${opts.crop[0]},${opts.crop[1]}+${opts.crop[2]}x${opts.crop[3]}`);
